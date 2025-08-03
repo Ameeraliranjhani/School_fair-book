@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Class 10th Fair books</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -63,8 +63,13 @@
 
 <body>
 
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"> </div>
+    </div>
+
   <header>
-    <h1>🧾 School Fair Books (Class 10th)</h1>
+    <h1>🧾 School Fair Bosoks (Class 10th)</h1>
     <p>Click on a subject to view daily fair book pictures</p>
   </header>
   <h2 style="color:black; font-size: 30px; text-align: center;">Al-Kausar High School Johi</h2>
@@ -84,7 +89,12 @@
   <footer>
     &copy; 2025 Fair Book Gallery | Designed by Ameer Ali Ranjhani
   </footer>
-
+<script>
+  window.addEventListener('load', function () {
+    document.getElementById('preloader').style.display = 'none';
+  });
+</script>
 </body>
 
+</body>
 </html>
