@@ -66,6 +66,15 @@
       background-color: #374bb3;
     }
 
+         .lazy-img {
+  filter: blur(10px);
+  opacity: 0;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+.lazy-img.loaded {
+  filter: blur(0);
+  opacity: 2;
+}
     footer {
       text-align: center;
       padding: 1rem;
@@ -84,47 +93,54 @@
 
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/1.jpeg" alt="Page 1">
+      <img src="physics-rough fair book/1.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1">
       <div class="caption">Page 1</div>
     </div>
     </section>
     <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/2.jpeg" alt="Page 2">
+      <img src="physics-rough fair book/2.jpeg"  loading="lazy" class="lazy-img"  alt="Page 2">
       <div class="caption">Page 2</div>
     </div>
   </section>
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/3.jpeg" alt="Page 3">
+      <img src="physics-rough fair book/3.jpeg"  loading="lazy" class="lazy-img"  alt="Page 3">
       <div class="caption">Page 3</div>
     </div>
   </section>
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/4.jpeg" alt="Page 4">
+      <img src="physics-rough fair book/4.jpeg"  loading="lazy" class="lazy-img"  alt="Page 4">
       <div class="caption">Page 4</div>
     </div>
   </section>
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/5.jpeg" alt="Page 5">
+      <img src="physics-rough fair book/5.jpeg"  loading="lazy" class="lazy-img"  alt="Page 5">
       <div class="caption">Page 5</div>
     </div>
   </section>
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/6.jpeg" alt="Page 6">
+      <img src="physics-rough fair book/6.jpeg"  loading="lazy" class="lazy-img"  alt="Page 6">
       <div class="caption">Page 6</div>
     </div>
   </section>
   <section class="gallery">
     <div class="card">
-      <img src="physics-rough fair book/7.jpeg" alt="Page 7">
+      <img src="physics-rough fair book/7.jpeg"  loading="lazy" class="lazy-img"  alt="Page 7">
       <div class="caption">Page 7</div>
     </div>
   </section>
    <a href="index.html" class="back-btn">← Back to Home</a>
+
+         <script> document.querySelectorAll('img.lazy-img').forEach(img => {
+  img.addEventListener('load', () => {
+    img.classList.add('loaded');
+  });
+});
+</script>
 
   <footer>
     &copy; 2025 Physics – Rough | Fair Book Gallery

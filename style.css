@@ -1,28 +1,36 @@
-/* Preloader background */
-#preloader {
+/* Full screen loader background */
+#loader {
   position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
-  background-color: #ffffff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
-/* Spinner animation */
-.loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+/* Spinning animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #3498db;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
   animation: spin 1s linear infinite;
 }
 
+/* Animation keyframe */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
 }

@@ -14,19 +14,8 @@
       color: #111827;
     }
 
-   body {
-      background-image: url('Untitled_Project__1_-removebg-preview\ \(1\).png');
-      background-size: cover;      
-      background-repeat: no-repeat; 
-      background-position: center;  
-      background-size: 300px 200px;
-      background-attachment: fixed;
-      background-color: white;
-
-    }
-
     header {
-      background: #1e3a8a;
+      background: linear-gradient(to right, #1e3a8a, #2c51b9);;
       color: white;
       padding: 1rem 2rem;
       text-align: center;
@@ -34,8 +23,8 @@
     }
 
     h1 {
-      margin: 0;
-      font-size: 2rem;
+  font-weight: 700;
+  font-size: 2.5rem;
     }
 
     .container {
@@ -46,7 +35,7 @@
     }
 
     .card {
-      background: white;
+      background: linear-gradient(to right, #1e3a8a, #2c51b9);
       padding: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -54,13 +43,14 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
       text-decoration: none;
-      color: #1e3a8a;
+      color: white; 
       font-weight: 600;
     }
 
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(to right, #2c51b9, #1e3a8a);
     }
 
     footer {
@@ -76,16 +66,16 @@
 <body>
 
   
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader"> </div>
-    </div>
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
 
   <header>
     <h1>🧾 School Fair Bosoks (Class 10th)</h1>
     <p>Click on a subject to view daily fair book pictures</p>
   </header>
-  <h2 style="color:black; font-size: 30px; text-align: center;">Al-Kausar High School Johi</h2>
+  <h2 style="font-size: 30px; text-align: center; background: linear-gradient(to right, #26fd43 , #6b0d88, #6b0d88, #0000FF,#d61e1e, #c2ce19);   -webkit-text-fill-color: transparent;   -webkit-background-clip: text;">Al-Kausar High School Johi</h2>
 
   <main class="container">
     <a href="english-exercise.html" class="card">English – Exercise</a>
@@ -102,22 +92,18 @@
   <footer>
     &copy; 2025 Fair Book Gallery | Designed by Ameer Ali Ranjhani
   </footer>
-<script>
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    const content = document.getElementById('content');
 
-    setTimeout(() => {
-      preloader.style.opacity = '0';
-      setTimeout(() => {
-        preloader.style.display = 'none';
-        content.style.display = 'block';
-      }, 600);
-    }, 2000); 
+<script>
+  window.addEventListener("load", function() {
+    // Delay of 1.5 seconds before hiding loader
+    setTimeout(function() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 1500); // 1500 milliseconds = 1.5 seconds
   });
 </script>
 
-</body>
+
 
 </body>
 </html>
