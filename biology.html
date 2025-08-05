@@ -66,16 +66,6 @@
       background-color: #374bb3;
     }
 
-     .lazy-img {
-  filter: blur(10px);
-  opacity: 0;
-  transition: filter 0.5s ease, opacity 0.5s ease;
-}
-.lazy-img.loaded {
-  filter: blur(0);
-  opacity: 2;
-}
-
     footer {
       text-align: center;
       padding: 1rem;
@@ -207,13 +197,6 @@
     </div>
   </section>
   <a href="index.html" class="back-btn">← Back to Home</a>
-
-    <script> document.querySelectorAll('img.lazy-img').forEach(img => {
-  img.addEventListener('load', () => {
-    img.classList.add('loaded');
-  });
-});
-</script>
 
   <footer>
     &copy; 2025 Biology | Fair Book Gallery
