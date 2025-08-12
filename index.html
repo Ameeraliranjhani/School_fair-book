@@ -1,170 +1,433 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Class 10th Fair books</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="Untitled_Project__1_-removebg-preview (1).png">
-  <meta name="google-site-verification" content="9Xx9FG1rDzQnvIDxGzGaPhr4iZsRkOvxPRbsw4lxstg" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #111827;
-    }
+<!--
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: linear-gradient(to right, #1e3a8a, #2c51b9);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-weight: 700;
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    .container {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: linear-gradient(to right, #1e3a8a, #2c51b9);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: white; 
-      font-weight: 600;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(to right, #2c51b9, #1e3a8a);
-    }
-
-    .div-box {
-      max-width: 800px;
-      margin: 15px auto;
-      padding: 15px;
-      background-color: white;
-      border-left: 6px solid #1e3a8a;
-      border-radius: 5px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #1e3a8a;
-    }
-
-    p {
-      color: #333;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgb(226, 221, 221);
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-
-    #loader {
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .spinner {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #1e3a8a;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-
-<body>
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <header>
-    <h1>📚  School Fair Books (Class 10th)</h1>
-    <h4>Click on a subject to view daily fair book pictures</h4>
-  </header>
-<br>
-  <h2 style="font-size: 30px; text-align: center; background: linear-gradient(to right, #26fd43 , #6b0d88, #6b0d88, #0000FF,#d61e1e, #c2ce19); -webkit-text-fill-color: transparent; -webkit-background-clip: text;">Al-Kausar High School Johi</h2>
-
-  <div class="div-box">
-    <h2>Updates on 08/12/2025</h2>
-    <ol>
-      <li><strong>Maths</strong></li>
-      <li><strong>physics-rough</strong></li>
-   
-    </ol>
-  </div>
-  <main class="container">
-    <a href="english-exercise.html" class="card">English – Exercise</a>
-    <a href="pak-study.html" class="card">Pakistan Studies</a>
-    <a href="physics-rough.html" class="card">Physics – Rough</a>
-    <a href="physics-fair.html" class="card">Physics – Fair</a>
-    <a href="chemistry.html" class="card">Chemistry</a>
-    <a href="biology.html" class="card">Biology</a>
-    <a href="maths.html" class="card">Mathematics</a>
-    <a href="computer-science.html" class="card">Computer Science</a>
-    <a href="urdu.html" class="card">Urdu</a>
-  </main>
-
-  <div class="div-box">
-    <h2>Website Objective</h2>
-    <p>This website has been created to help my classmates by providing a simple platform where they can view subject-wise images of fair book work. They can easily check the photos and write their own fair books correctly and on time.</p>
-  </div>
-
-  <footer>
-    &copy; <strong>2025 Fair Book Gallery | Designed by Ameer Ali Ranjhani</strong>
-  </footer>
-
-  <script>
-    window.addEventListener("load", function() {
-      setTimeout(function() {
-        document.getElementById("loader").style.display = "none";
-      }, 1500);
-    });
-  </script>
-</body>
-</html>
+	<!--
+		Class 10 Fair Books - Vibrant Gradient Landing Page
+		Author: School Fair Books Team
+		Last updated: August 2025
+	-->
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Class 10 Fair Books - Explore digital fair books for all subjects.">
+		<title>Class 10 Fair Books</title>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+		<!-- Main Styles -->
+		<style>
+			/* Root color variables for gradients and theme */
+			:root {
+				--primary-gradient: linear-gradient(to right, #6a11cb, #2575fc);
+				--nav-gradient: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+				--footer-gradient: linear-gradient(90deg, #232526 0%, #414345 100%);
+				--card-gradient-1: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+				--card-gradient-2: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+				--card-gradient-3: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+				--card-gradient-4: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+				--card-gradient-5: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+				--card-gradient-6: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+				--card-gradient-7: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%);
+				--card-gradient-8: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+				--card-gradient-9: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+				--button-gradient: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+				--text: #222;
+				--white: #fff;
+				--shadow: 0 4px 24px rgba(44,62,80,0.12);
+				--radius: 14px;
+			}
+			html {
+				box-sizing: border-box;
+				font-size: 16px;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			body {
+				margin: 0;
+				font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+				background: #f4f6fb;
+				color: var(--text);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+			/* Sticky Gradient Navigation Bar */
+			header {
+				background: var(--nav-gradient);
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				box-shadow: var(--shadow);
+			}
+			nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 1rem 2rem;
+			}
+			.site-title {
+				font-size: 2rem;
+				font-weight: 700;
+				color: var(--white);
+				letter-spacing: 1px;
+				text-shadow: 0 2px 8px rgba(44,62,80,0.12);
+			}
+			.nav-links {
+				display: flex;
+				gap: 1.2rem;
+			}
+			.nav-links a {
+				text-decoration: none;
+				color: #f4f6fb;
+				font-weight: 600;
+				padding: 0.5rem 1rem;
+				border-radius: var(--radius);
+				background: linear-gradient(90deg, rgba(106,17,203,0.12) 0%, rgba(37,117,252,0.12) 100%);
+				box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+			}
+			.nav-links a:hover, .nav-links a:focus {
+				background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+				color: #fff;
+				box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+				outline: none;
+			}
+			.menu-toggle {
+				display: none;
+				background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+				border: none;
+				font-size: 2rem;
+				color: #f4f6fb;
+				border-radius: 8px;
+				padding: 0.2rem 0.7rem;
+				cursor: pointer;
+				box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+				transition: background 0.2s, color 0.2s;
+			}
+			.menu-toggle:hover, .menu-toggle:focus {
+				background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+				color: #fff;
+				outline: none;
+			}
+			@media (max-width: 900px) {
+				nav {
+					flex-direction: column;
+					align-items: flex-start;
+					padding: 1rem;
+				}
+				.nav-links {
+					flex-direction: column;
+					width: 100%;
+					gap: 0.5rem;
+					display: none;
+				}
+				.nav-links.active {
+					display: flex;
+				}
+				.menu-toggle {
+					display: block;
+					align-self: flex-end;
+				}
+			}
+			/* Hero Section with Gradient */
+			.hero {
+				background: var(--primary-gradient);
+				color: var(--white);
+				padding: 5rem 2rem 4rem 2rem;
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+				min-height: 350px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				animation: fadeIn 1.2s ease;
+			}
+			/* Centered fixed logo background in hero */
+			.hero-logo-bg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 0;
+				opacity: 0.13;
+				width: 220px;
+				height: 220px;
+				pointer-events: none;
+				filter: drop-shadow(0 8px 32px rgba(44,62,80,0.18));
+			}
+			.hero::after {
+				content: "";
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				/* Removed background logo to prevent double logo effect */
+				opacity: 0;
+				pointer-events: none;
+			}
+			.hero-title {
+				font-size: 2.8rem;
+				font-weight: 700;
+				margin-bottom: 1rem;
+				letter-spacing: 1px;
+				text-shadow: 0 2px 8px rgba(44,62,80,0.12);
+			}
+			.hero-desc {
+				font-size: 1.3rem;
+				margin-bottom: 2rem;
+				font-weight: 400;
+				text-shadow: 0 2px 8px rgba(44,62,80,0.08);
+			}
+			.cta-btn {
+				background: var(--button-gradient);
+				color: var(--white);
+				font-size: 1.2rem;
+				font-weight: 700;
+				padding: 1rem 2.5rem;
+				border: none;
+				border-radius: 16px;
+				box-shadow: var(--shadow);
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s;
+				margin-top: 1rem;
+			}
+			.cta-btn:hover, .cta-btn:focus {
+				background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 100%);
+				transform: translateY(-2px) scale(1.04);
+				outline: none;
+			}
+			/* Subjects Grid with Gradient Cards */
+			main {
+				flex: 1;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem 1rem;
+			}
+			.subjects-section {
+				display: grid;
+				grid-template-columns: repeat(1, 1fr);
+				gap: 2rem;
+				margin-top: 2rem;
+				animation: fadeInUp 1.2s ease;
+			}
+			@media (min-width: 600px) {
+				.subjects-section {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+			.subject-card {
+				background: var(--card-gradient-1);
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+				padding: 2rem 1.2rem 1.5rem 1.2rem;
+				text-align: center;
+				position: relative;
+				transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+				cursor: pointer;
+				overflow: hidden;
+				will-change: transform, box-shadow;
+				animation: fadeInUp 0.7s ease;
+			}
+			.subject-card:nth-child(2) { background: var(--card-gradient-2); }
+			.subject-card:nth-child(3) { background: var(--card-gradient-3); }
+			.subject-card:nth-child(4) { background: var(--card-gradient-4); }
+			.subject-card:nth-child(5) { background: var(--card-gradient-5); }
+			.subject-card:nth-child(6) { background: var(--card-gradient-6); }
+			.subject-card:nth-child(7) { background: var(--card-gradient-7); }
+			.subject-card:nth-child(8) { background: var(--card-gradient-8); }
+			.subject-card:nth-child(9) { background: var(--card-gradient-9); }
+			.subject-card:hover, .subject-card:focus {
+				transform: translateY(-8px) scale(1.04);
+				box-shadow: 0 12px 32px rgba(44,62,80,0.18);
+				outline: none;
+			}
+			.subject-icon {
+				font-size: 2.8rem;
+				margin-bottom: 1rem;
+				color: #2575fc;
+				transition: color 0.2s;
+			}
+			.subject-card:hover .subject-icon {
+				color: #6a11cb;
+			}
+			.subject-title {
+				font-size: 1.3rem;
+				font-weight: 700;
+				margin-bottom: 0.7rem;
+			}
+			.subject-desc {
+				font-size: 1rem;
+				color: #222;
+				margin-bottom: 1rem;
+			}
+			.view-btn {
+				background: var(--button-gradient);
+				color: var(--white);
+				border: none;
+				border-radius: 12px;
+				padding: 0.6rem 1.6rem;
+				font-size: 1rem;
+				font-weight: 600;
+				margin-top: 0.7rem;
+				cursor: pointer;
+				box-shadow: var(--shadow);
+				transition: background 0.2s, transform 0.2s;
+			}
+			.view-btn:hover, .view-btn:focus {
+				background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 100%);
+				transform: scale(1.07);
+				outline: none;
+			}
+			/* Animations */
+			@keyframes fadeInUp {
+				from { opacity: 0; transform: translateY(30px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+			@keyframes fadeIn {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
+			/* Footer with Gradient */
+			footer {
+				background: var(--footer-gradient);
+				color: #f8ffae;
+				text-align: center;
+				padding: 1.2rem 0;
+				font-size: 1rem;
+				letter-spacing: 0.5px;
+				box-shadow: 0 -2px 8px rgba(44,62,80,0.12);
+			}
+			@media (max-width: 600px) {
+				.hero-title { font-size: 2rem; }
+				.hero-desc { font-size: 1rem; }
+				.subjects-section { gap: 1rem; }
+				.subject-card { padding: 1.2rem 0.7rem; }
+				nav { padding: 0.7rem; }
+			}
+			/* Accessibility focus styles */
+			a:focus, button:focus {
+				outline: 2px solid #43c6ac;
+				outline-offset: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header & Navigation -->
+		<header>
+			<nav aria-label="Main Navigation">
+				<span class="site-title">Class 10 Fair Books</span>
+				<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+				<div class="nav-links" role="menu">
+					<a href="english-exercise.html" role="menuitem">English-Exercise</a>
+					<a href="pak-study.html" role="menuitem">Pak Study</a>
+					<a href="physics-rough.html" role="menuitem">Physics-Rough</a>
+					<a href="physics-fair.html" role="menuitem">Physics-Fair</a>
+					<a href="chemistry.html" role="menuitem">Chemistry</a>
+					<a href="biology.html" role="menuitem">Biology</a>
+					<a href="maths.html" role="menuitem">Maths</a>
+					<a href="computer-science.html" role="menuitem">Computer Science</a>
+					<a href="urdu.html" role="menuitem">Urdu</a>
+				</div>
+			</nav>
+		</header>
+		<!-- Hero Section -->
+		<section class="hero" role="banner">
+			<!-- Centered fixed logo background -->
+			<img src="Untitled_Project__1_-removebg-preview (1).png" alt="Class 10 Fair Books Logo" class="hero-logo-bg" />
+			<!-- Abstract SVG background for creativity -->
+			<svg viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="0.2" d="M0,160L60,176C120,192,240,224,360,229.3C480,235,600,213,720,186.7C840,160,960,128,1080,117.3C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+			<div class="hero-content">
+				<h1 class="hero-title">Discover Class 10 Fair Books</h1>
+				<p class="hero-desc">A creative digital Fair Books for all your subjects. Explore fair book images, notes, and resources with a modern, interactive experience.</p>
+				<a href="#subjects" class="cta-btn">Start Exploring</a>
+			</div>
+		</section>
+		<!-- Main Content: Subject Cards -->
+		<main>
+			<section id="subjects" class="subjects-section" aria-label="Subjects">
+				<!-- English-Exercise -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">📘</span>
+					<div class="subject-title">English-Exercise</div>
+					<div class="subject-desc">View fair book images for English-Exercise.</div>
+					<a href="english-exercise.html" class="view-btn" aria-label="View English-Exercise Book">View</a>
+				</div>
+				<!-- Pak Study -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">🇵🇰</span>
+					<div class="subject-title">Pak Study</div>
+					<div class="subject-desc">View fair book images for Pak Study.</div>
+					<a href="pak-study.html" class="view-btn" aria-label="View Pak Study Book">View</a>
+				</div>
+				<!-- Physics-Rough -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">⚡</span>
+					<div class="subject-title">Physics-Rough</div>
+					<div class="subject-desc">View fair book images for Physics-Rough.</div>
+					<a href="physics-rough.html" class="view-btn" aria-label="View Physics-Rough Book">View</a>
+				</div>
+				<!-- Physics-Fair -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">🔭</span>
+					<div class="subject-title">Physics-Fair</div>
+					<div class="subject-desc">View fair book images for Physics-Fair.</div>
+					<a href="physics-fair.html" class="view-btn" aria-label="View Physics-Fair Book">View</a>
+				</div>
+				<!-- Chemistry -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">🧪</span>
+					<div class="subject-title">Chemistry</div>
+					<div class="subject-desc">View fair book images for Chemistry.</div>
+					<a href="chemistry.html" class="view-btn" aria-label="View Chemistry Book">View</a>
+				</div>
+				<!-- Biology -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">🔬</span>
+					<div class="subject-title">Biology</div>
+					<div class="subject-desc">View fair book images for Biology.</div>
+					<a href="biology.html" class="view-btn" aria-label="View Biology Book">View</a>
+				</div>
+				<!-- Maths -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">📐</span>
+					<div class="subject-title">Maths</div>
+					<div class="subject-desc">View fair book images for Maths.</div>
+					<a href="maths.html" class="view-btn" aria-label="View Maths Book">View</a>
+				</div>
+				<!-- Computer Science -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">💻</span>
+					<div class="subject-title">Computer Science</div>
+					<div class="subject-desc">View fair book images for Computer Science.</div>
+					<a href="computer-science.html" class="view-btn" aria-label="View Computer Science Book">View</a>
+				</div>
+				<!-- Urdu -->
+				<div class="subject-card" tabindex="0">
+					<span class="subject-icon" aria-hidden="true">📗</span>
+					<div class="subject-title">Urdu</div>
+					<div class="subject-desc">View fair book images for Urdu.</div>
+					<a href="urdu.html" class="view-btn" aria-label="View Urdu Book">View</a>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer>
+			&copy; 2025 Class 10 Fair Books. By Ameer Ali Ranjhani
+		</footer>
+		<!-- Mobile menu toggle script -->
+		<script>
+			// Mobile menu toggle
+			const menuToggle = document.querySelector('.menu-toggle');
+			const navLinks = document.querySelector('.nav-links');
+			menuToggle.addEventListener('click', function() {
+				const expanded = navLinks.classList.toggle('active');
+				menuToggle.setAttribute('aria-expanded', expanded);
+			});
+		</script>
+	</body>
+	</html>
