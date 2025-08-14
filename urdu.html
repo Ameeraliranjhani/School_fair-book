@@ -1,227 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Urdu- Fair Book</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Urdu fair book gallery - Class 10 Fair Books" />
+  <title>Urdu – Fair Book</title>
+
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #1e3a8a;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    header h2 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      text-align: center;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .caption {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      color: #374151;
-    }
-
-    .back-btn {
-      display: block;
-      width: max-content;
-      margin: 1.5rem auto;
-      padding: 0.6rem 1.5rem;
-      background-color: #1e3a8a;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .back-btn:hover {
-      background-color: #1e3a8a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #e5e7eb;
-      color: #555;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-    }
+  :root{--bg:#f6f9ff;--muted:#6b7380;--accent-1:#185a9d;--accent-2:#43cea2;--nav-grad:linear-gradient(90deg,var(--accent-1),var(--accent-2));--card-bg:rgba(255,255,255,0.92);--glass-border:rgba(24,90,157,0.06);--btn-grad:linear-gradient(90deg,var(--accent-2),var(--accent-1));--radius:12px;--shadow-sm:0 8px 28px rgba(16,24,40,0.06);--shadow-lg:0 20px 48px rgba(16,24,40,0.12)}
+  html{box-sizing:border-box;font-family:'Montserrat',system-ui,Segoe UI,Roboto,Arial}
+  *,*:before,*:after{box-sizing:inherit}
+  body{margin:0;background:var(--bg);color:#0f1724;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+  header{background:var(--nav-grad);padding:.9rem 0;box-shadow:var(--shadow-sm)}
+  .site-title{color:#fff;font-weight:800;font-size:1.25rem;padding-left:1rem}
+  nav{display:flex;align-items:center;justify-content:space-between}
+  .nav-links{display:flex;gap:.6rem}
+  .nav-links a{padding:.4rem .8rem;border-radius:8px;color:rgba(255,255,255,0.95);font-weight:600;text-decoration:none}
+  .menu-toggle{display:none;background:transparent;border:none;color:#fff;font-size:1.2rem}
+  .skip-link{position:absolute;left:-9999px}
+  .hero{background:linear-gradient(135deg,rgba(24,90,157,0.95),rgba(67,206,162,0.92));color:#fff;padding:2.6rem 0}
+  .hero .container{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+  .hero-title{font-size:1.9rem;margin:0 0 .4rem;font-weight:800}
+  .hero-desc{margin:0 0 .8rem;color:rgba(255,255,255,0.92)}
+  .cta-btn{background:var(--btn-grad);color:#fff;padding:.6rem 1.2rem;border-radius:999px;border:none;font-weight:700}
+  main{padding:1.4rem 0}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+  .img-card{background:var(--card-bg);border-radius:10px;padding:0.7rem;border:1px solid var(--glass-border);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center}
+  .img-card img{width:100%;height:auto;border-radius:8px;display:block}
+  .img-caption{margin-top:.5rem;font-weight:600;color:var(--muted)}
+  .back-btn{display:inline-block;margin:1rem 0;padding:.45rem .9rem;border-radius:10px;background:transparent;border:1px solid transparent;color:var(--accent-1);cursor:pointer}
+  footer{background:linear-gradient(90deg,#232526,#414345);color:#fff;padding:1rem 0;text-align:center}
+  @media(max-width:900px){.menu-toggle{display:block}.nav-links{display:none}.nav-links.active{display:flex;flex-direction:column;gap:.5rem}}
   </style>
 </head>
 <body>
 
   <header>
-    <h2>🔖 Urdu – Fair Book</h2>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <span class="site-title">Class 10 Fair Books</span>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">☰</button>
+        <nav id="main-nav" class="nav-links" aria-label="Main Navigation">
+          <a href="index.html">Home</a>
+          <a href="maths.html">Maths</a>
+          <a href="english-exercise.html">English</a>
+          <a href="urdu.html">Urdu</a>
+          <a href="pak-study.html">Pak-Study</a>
+          <a href="chemistry.html">Chemistry</a>
+          <a href="biology.html">Biology</a>
+          <a href="computer-science.html">Computer Science</a>
+          <a href="physics-fair.html">Physics</a>
+        </nav>
+      </div>
+    </div>
   </header>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/1.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1">
-      <div class="caption">Page 1</div>
-    </div>
-    </section>
-    <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/2.jpeg"  loading="lazy" class="lazy-img"  alt="Page 2">
-      <div class="caption">Page 2</div>
-    </div>
-    </section>
-    <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/3.jpeg"  loading="lazy" class="lazy-img"  alt="Page 3">
-      <div class="caption">Page 3</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/4.jpeg"  loading="lazy" class="lazy-img"  alt="Page 4">
-      <div class="caption">Page 4</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/5.jpeg"  loading="lazy" class="lazy-img"  alt="Page 5">
-      <div class="caption">Page 5</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/6.jpeg"  loading="lazy" class="lazy-img"  alt="Page 6">
-      <div class="caption">Page 6</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/7.jpeg"  loading="lazy" class="lazy-img"  alt="Page 7">
-      <div class="caption">Page 7</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/8.jpeg"  loading="lazy" class="lazy-img"  alt="Page 8">
-      <div class="caption">Page 8</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/9.jpeg"  loading="lazy" class="lazy-img"  alt="Page 9">
-      <div class="caption">Page 9</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/10.jpeg"  loading="lazy" class="lazy-img"  alt="Page 10">
-      <div class="caption">Page 10</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/11.jpeg"  loading="lazy" class="lazy-img"  alt="Page 11">
-      <div class="caption">Page 11</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/12.jpeg"  loading="lazy" class="lazy-img"  alt="Page 12">
-      <div class="caption">Page 12</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/13.jpeg"  loading="lazy" class="lazy-img"  alt="Page 13">
-      <div class="caption">Page 13</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/14.jpeg"  loading="lazy" class="lazy-img"  alt="Page 14">
-      <div class="caption">Page 14</div>
-    </div>
-  </section>
-   <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/15.jpeg"  loading="lazy" class="lazy-img"  alt="Page 15">
-      <div class="caption">Page 15</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/16.jpeg" alt="Urdu Fair Book Page 16" loading="lazy" />
-      <div class="caption">Page 16</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/17.jpeg" alt="Urdu Fair Book Page 17" loading="lazy" />
-      <div class="caption">Page 17</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-      <img src="Urdu fair book/18.jpeg" alt="Urdu Fair Book Page 18" loading="lazy" />
-      <div class="caption">Page 18</div>
-    </div>
-  </section>
-  <br>
-  <hr>
-  <h1 style="font-size: 3rem; margin: 0%; text-align: center; color: #1e3a8a; ">Grammar Section</h1>
-  <section class="gallery">
-    <div class="card">
-        <img src="Urdu fair book/1.1.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1.1">
-        <div class="caption">Page 1.1</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-        <img src="Urdu fair book/1.2.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1.2">
-        <div class="caption">Page 1.2</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-        <img src="Urdu fair book/1.3.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1.3">
-        <div class="caption">Page 1.3</div>
-    </div>
-  </section>
-  <section class="gallery">
-    <div class="card">
-        <img src="Urdu fair book/1.4.jpeg"  loading="lazy" class="lazy-img"  alt="Page 1.4">
-        <div class="caption">Page 1.4</div>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1 class="hero-title">Urdu – Fair Book</h1>
+        <p class="hero-desc">Browse the scanned fair book pages for Urdu. Tap an image to open in a new tab.</p>
+        <a href="#gallery" class="cta-btn">View Gallery</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true" style="width:120px;height:120px;display:flex;align-items:center;justify-content:center">
+        <img src="Untitled_Project__1_-removebg-preview (1).png" alt="Class 10 Fair Books logo" style="max-width:86%;max-height:86%">
+      </div>
     </div>
   </section>
 
-   <a href="index.html" class="back-btn">← Back to Home</a>
+  <main class="container">
+    <section id="gallery" class="gallery-grid" aria-label="Urdu pages">
+      <!-- Images: kept original paths; clicking opens the image file -->
+      <a class="img-card" href="Urdu fair book/1.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/1.jpeg" alt="Page 1" loading="lazy">
+        <div class="img-caption">Page 1</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/2.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/2.jpeg" alt="Page 2" loading="lazy">
+        <div class="img-caption">Page 2</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/3.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/3.jpeg" alt="Page 3" loading="lazy">
+        <div class="img-caption">Page 3</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/4.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/4.jpeg" alt="Page 4" loading="lazy">
+        <div class="img-caption">Page 4</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/5.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/5.jpeg" alt="Page 5" loading="lazy">
+        <div class="img-caption">Page 5</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/6.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/6.jpeg" alt="Page 6" loading="lazy">
+        <div class="img-caption">Page 6</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/7.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/7.jpeg" alt="Page 7" loading="lazy">
+        <div class="img-caption">Page 7</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/8.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/8.jpeg" alt="Page 8" loading="lazy">
+        <div class="img-caption">Page 8</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/9.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/9.jpeg" alt="Page 9" loading="lazy">
+        <div class="img-caption">Page 9</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/10.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/10.jpeg" alt="Page 10" loading="lazy">
+        <div class="img-caption">Page 10</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/11.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/11.jpeg" alt="Page 11" loading="lazy">
+        <div class="img-caption">Page 11</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/12.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/12.jpeg" alt="Page 12" loading="lazy">
+        <div class="img-caption">Page 12</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/13.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/13.jpeg" alt="Page 13" loading="lazy">
+        <div class="img-caption">Page 13</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/14.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/14.jpeg" alt="Page 14" loading="lazy">
+        <div class="img-caption">Page 14</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/15.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/15.jpeg" alt="Page 15" loading="lazy">
+        <div class="img-caption">Page 15</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/16.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/16.jpeg" alt="Page 16" loading="lazy">
+        <div class="img-caption">Page 16</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/17.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/17.jpeg" alt="Page 17" loading="lazy">
+        <div class="img-caption">Page 17</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/18.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/18.jpeg" alt="Page 18" loading="lazy">
+        <div class="img-caption">Page 18</div>
+      </a>
+
+      <!-- Grammar section images -->
+      <a class="img-card" href="Urdu fair book/1.1.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/1.1.jpeg" alt="Grammar Page 1.1" loading="lazy">
+        <div class="img-caption">Grammar 1.1</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/1.2.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/1.2.jpeg" alt="Grammar Page 1.2" loading="lazy">
+        <div class="img-caption">Grammar 1.2</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/1.3.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/1.3.jpeg" alt="Grammar Page 1.3" loading="lazy">
+        <div class="img-caption">Grammar 1.3</div>
+      </a>
+      <a class="img-card" href="Urdu fair book/1.4.jpeg" target="_blank" rel="noopener">
+        <img src="Urdu fair book/1.4.jpeg" alt="Grammar Page 1.4" loading="lazy">
+        <div class="img-caption">Grammar 1.4</div>
+      </a>
+
+    </section>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </main>
 
   <footer>
-    &copy; 2025 Urdu – Fair Book | Gallery by Ameer Ali Ranjhani
+    &copy; 2025 Class 10 Fair Books — Urdu Fair Book
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+
+    // Menu toggle (matches homepage behavior)
+    (function(){
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.getElementById('main-nav');
+      if(!toggle || !nav) return;
+      function setOpen(open){
+        const is = typeof open === 'boolean' ? open : !nav.classList.contains('active');
+        nav.classList.toggle('active', is);
+        toggle.setAttribute('aria-expanded', is ? 'true' : 'false');
+      }
+      toggle.addEventListener('click', (e)=>{e.stopPropagation(); setOpen();});
+      document.addEventListener('click',(e)=>{ if(!nav.contains(e.target) && e.target!==toggle) setOpen(false); });
+      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') setOpen(false); });
+    })();
+  </script>
 </body>
 </html>
