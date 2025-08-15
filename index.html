@@ -1,295 +1,683 @@
-<!-- Class 10 Fair Books - Premium Modern Landing Page -->
+<!-- Class 10 Fair Books - Enhanced Premium Modern Landing Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="description" content="Class 10 Fair Books - Explore digital fair books for all subjects.">
-<title>Class 10 Fair Books</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Class 10 Fair Books - Explore digital fair books for all subjects with light and dark modes.">
+    <title>Class 10 Fair Books</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- AOS Library for Scroll Animations -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
-<!-- Performance & theme -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<meta name="theme-color" content="#185a9d">
-<!-- favicon -->
-<link rel="icon" href="Untitled_Project__1_-removebg-preview (1).png" />
+    <!-- Performance & theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#185a9d">
+    <!-- favicon -->
+    <link rel="icon" href="Untitled_Project__1_-removebg-preview (1).png" />
 
-<style>
-:root{
-  --bg: #f6f9ff;
-  --muted: #6b7380;
-  --accent-1: #185a9d;
-  --accent-2: #43cea2;
-  --nav-grad: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-  --card-bg: rgba(255,255,255,0.82);
-  --glass-border: rgba(24,90,157,0.08);
-  --btn-grad: linear-gradient(90deg,var(--accent-2),var(--accent-1));
-  --radius: 14px;
-  --shadow-sm: 0 6px 20px rgba(28,45,60,0.08);
-  --shadow-lg: 0 18px 46px rgba(20,40,60,0.14);
-}
-html{box-sizing:border-box;font-family: 'Montserrat', system-ui;}
-*,*:before,*:after{box-sizing:inherit;}
-body{margin:0;background:var(--bg);color:#0f1724;min-height:100vh;display:flex;flex-direction:column;}
-a{color:inherit;text-decoration:none}
+    <style>
+        :root {
+            --accent-1: #185a9d;
+            --accent-2: #43cea2;
+            --nav-grad: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            --btn-grad: linear-gradient(90deg, var(--accent-2), var(--accent-1));
+            --radius: 14px;
+            --shadow-sm: 0 6px 20px rgba(28, 45, 60, 0.08);
+            --shadow-lg: 0 18px 46px rgba(20, 40, 60, 0.14);
+            
+            /* Light Theme Variables */
+            --bg: #f6f9ff;
+            --text-color: #0f1724;
+            --muted: #6b7380;
+            --card-bg: rgba(255, 255, 255, 0.82);
+            --glass-border: rgba(24, 90, 157, 0.08);
+        }
 
-/* Container */
-.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+        [data-theme="dark"] {
+            --bg: #1a1a2e;
+            --text-color: #e0e0e0;
+            --muted: #a0a0b0;
+            --card-bg: rgba(26, 26, 46, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 6px 20px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 18px 46px rgba(0, 0, 0, 0.25);
+        }
 
-/* Header / Nav */
-header{background:var(--nav-grad);position:sticky;top:0;z-index:60;box-shadow:var(--shadow-sm)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
-.site-title{color:#fff;font-weight:800;font-size:1.35rem;letter-spacing:0.6px}
-.nav-links{display:flex;gap:0.6rem;align-items:center}
-.nav-links a{display:inline-block;padding:0.45rem 0.9rem;border-radius:10px;color:rgba(255,255,255,0.95);font-weight:600;position:relative;transition:transform .18s ease}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:4px;width:0%;height:2px;background:#fff;transition:width 0.3s ease}
-.nav-links a:hover::after{width:100%}
-.nav-links a:hover{transform:translateY(-2px)}
-.menu-toggle{display:none;background:transparent;border:none;color:#fff;font-size:1.4rem}
+        html {
+            box-sizing: border-box;
+            font-family: 'Montserrat', system-ui;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
 
-/* Skip link */
-.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;color:#000;padding:0.35rem 0.6rem;border-radius:6px;z-index:99}
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
 
-/* Hero Section */
-.hero{
-  background:linear-gradient(135deg,rgba(24,90,157,0.95),rgba(67,206,162,0.92));
-  color:#fff;
-  padding:3.6rem 1rem 3rem;
-  position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:'';
-  position:absolute;
-  top:-50px;
-  right:-80px;
-  width:300px;
-  height:300px;
-  background:radial-gradient(circle at center, rgba(255,255,255,0.15), transparent);
-  border-radius:50%;
-  animation:float 6s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(12px);}
-}
-.hero .container{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.hero-content{flex:1;min-width:260px}
-.hero-title{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.04;margin:0 0 .6rem;font-weight:800;letter-spacing:0.5px}
-.hero-desc{margin:0 0 1.4rem;color:rgba(255,255,255,0.93);font-weight:500}
-.cta-btn{
-  background:var(--btn-grad);
-  color:#fff;
-  padding:0.75rem 1.6rem;
-  border-radius:999px;
-  border:none;
-  font-weight:700;
-  box-shadow:var(--shadow-lg);
-  cursor:pointer;
-  transition:transform 0.3s ease;
-}
-.cta-btn:hover{transform:translateY(-3px) scale(1.03)}
-.hero-visual{
-  width:220px;
-  height:220px;
-  border-radius:14px;
-  background:linear-gradient(180deg,rgba(255,255,255,0.06),transparent);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:var(--shadow-sm);
-  transition:transform 0.4s ease;
-}
-.hero-visual:hover{transform:scale(1.05) rotate(1deg)}
-.hero-visual img{max-width:86%;max-height:86%}
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
-/* Subject Grid */
-main{padding:2rem 0}
-.subjects-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
-.subject-card{
-  background:var(--card-bg);
-  border-radius:12px;
-  padding:1.25rem;
-  border:1px solid var(--glass-border);
-  box-shadow:var(--shadow-sm);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
-  transition:transform 0.25s ease,box-shadow 0.25s ease;
-}
-.subject-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--shadow-lg)}
-.subject-icon{
-  width:56px;height:56px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.45rem;margin-bottom:.9rem;
-  background:linear-gradient(135deg,#fff,rgba(255,255,255,0.85));
-  box-shadow:0 6px 18px rgba(16,24,40,0.06)
-}
-.subject-title{font-weight:700;margin-bottom:.35rem;letter-spacing:0.3px}
-.subject-desc{color:var(--muted);font-size:.98rem;text-align:center;padding:0 .5rem}
-.view-btn{
-  margin-top:0.9rem;background:transparent;
-  border:1.6px solid transparent;padding:.5rem .9rem;
-  border-radius:12px;cursor:pointer;font-weight:700;color:var(--accent-1);
-  background:linear-gradient(180deg,rgba(67,206,162,0.06),transparent);
-  transition:transform .15s
-}
-.view-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+        a {
+            color: inherit;
+            text-decoration: none
+        }
 
-/* Footer */
-footer{
-  background:linear-gradient(90deg,#232526,#414345);
-  color:#fff;padding:1.2rem 0;
-  text-align:center;font-size:.95rem;
-  border-top:1px solid rgba(255,255,255,0.1);
-  display:flex;flex-direction:column;gap:0.4rem;
-}
-footer .socials a{color:#fff;margin:0 0.3rem;font-size:1.1rem;transition:color 0.3s}
-footer .socials a:hover{color:var(--accent-2)}
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem
+        }
 
-/* Responsive Tweaks - Minimal Changes */
-@media (max-width: 900px) {
-  .hero .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-visual {
-    margin-bottom: 1rem;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.6rem;
-  }
-  .nav-links.active {
+        /* Header / Nav */
+        header {
+            background: var(--nav-grad);
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            box-shadow: var(--shadow-sm)
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 0
+        }
+
+        .site-title {
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: 0.6px
+        }
+        
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 0.45rem 0.9rem;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+            position: relative;
+            transition: transform .18s ease
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s ease
+        }
+
+        .nav-links a:hover::after {
+            width: 100%
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px)
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .theme-toggle .fa-sun { display: none; }
+        .theme-toggle .fa-moon { display: block; }
+        [data-theme="dark"] .theme-toggle .fa-sun { display: block; }
+        [data-theme="dark"] .theme-toggle .fa-moon { display: none; }
+
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            background: #fff;
+            color: #000;
+            padding: 0.35rem 0.6rem;
+            border-radius: 6px;
+            z-index: 99
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(24, 90, 157, 0.95), rgba(67, 206, 162, 0.92));
+            color: #fff;
+            padding: 3.6rem 1rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(12px); }
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 260px
+        }
+
+        .hero-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.04;
+            margin: 0 0 .6rem;
+            font-weight: 800;
+            letter-spacing: 0.5px
+        }
+
+        .hero-desc {
+            margin: 0 0 1.4rem;
+            color: rgba(255, 255, 255, 0.93);
+            font-weight: 500
+        }
+
+        .cta-btn {
+            background: var(--btn-grad);
+            color: #fff;
+            padding: 0.75rem 1.6rem;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) scale(1.03)
+        }
+
+        .hero-visual {
+            width: 220px;
+            height: 220px;
+            border-radius: 14px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-visual:hover {
+            transform: scale(1.05) rotate(1deg)
+        }
+
+        .hero-visual img {
+            max-width: 86%;
+            max-height: 86%
+        }
+
+        /* Subject Grid */
+        main {
+            padding: 2rem 0;
+            flex-grow: 1;
+        }
+
+        .subjects-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem
+        }
+
+        .subject-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .subject-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            margin-bottom: .9rem;
+            background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.85));
+            box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06)
+        }
+
+        .subject-title {
+            font-weight: 700;
+            margin-bottom: .35rem;
+            letter-spacing: 0.3px
+        }
+
+        .subject-desc {
+            color: var(--muted);
+            font-size: .98rem;
+            text-align: center;
+            padding: 0 .5rem
+        }
+
+        .view-btn {
+            margin-top: 0.9rem;
+            background: transparent;
+            border: 1.6px solid transparent;
+            padding: .5rem .9rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--accent-1);
+            background: linear-gradient(180deg, rgba(67, 206, 162, 0.06), transparent);
+            transition: transform .15s, box-shadow 0.15s ease;
+        }
+
+        .view-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm)
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #232526, #414345);
+            color: #fff;
+            padding: 1.2rem 0;
+            text-align: center;
+            font-size: .95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        footer .socials a {
+            color: #fff;
+            margin: 0 0.3rem;
+            font-size: 1.1rem;
+            transition: color 0.3s
+        }
+
+        footer .socials a:hover {
+            color: var(--accent-2)
+        }
+
+        /* Daily Upload Floating Button */
+.daily-upload-btn {
+    position: fixed;
+    bottom: 80px;          /* a little above the back-to-top button */
+    right: 20px;
+    background: var(--btn-grad);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
     display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    z-index: 50;
+    transition: transform 0.3s ease;
 }
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 1.5rem;
-  }
-  .hero-desc {
-    font-size: 0.95rem;
-  }
-  .subject-card {
-    padding: 1rem;
-  }
+.daily-upload-btn:hover {
+    transform: translateY(-3px);
 }
-@media (max-width: 400px) {
-  .cta-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-  }
-  footer {
-    font-size: 0.85rem;
-  }
-}
-</style>
+
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--btn-grad);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            z-index: 50;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 900px) {
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-visual {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--accent-1);
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-desc {
+                font-size: 0.95rem;
+            }
+
+            .subject-card {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .cta-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            footer {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- rest of your body content remains the same -->
-<header>
-  <a class="skip-link" href="#subjects">Skip to subjects</a>
-  <nav aria-label="Main Navigation" class="container">
-    <span class="site-title">Class 10 Fair Books</span>
-  <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
-  <div class="nav-links" id="main-nav">
-      <a href="english-exercise.html">English-Exercise</a>
-      <a href="pak-study.html">Pak Study</a>
-      <a href="physics-rough.html">Physics-Rough</a>
-      <a href="physics-fair.html">Physics-Fair</a>
-      <a href="chemistry.html">Chemistry</a>
-      <a href="biology.html">Biology</a>
-      <a href="maths.html">Maths</a>
-      <a href="computer-science.html">Computer Science</a>
-      <a href="urdu.html">Urdu</a>
-    </div>
-  </nav>
-</header>
+    <header>
+        <a class="skip-link" href="#subjects">Skip to subjects</a>
+        <nav aria-label="Main Navigation" class="container">
+            <span class="site-title">Class 10 Fair Books</span>
+            <div class="nav-controls">
+                <div class="nav-links" id="main-nav">
+                    <a href="#english">English-Exercise</a>
+                    <a href="#pak-study">Pak Study</a>
+                    <a href="#physics">Physics-Rough</a>
+                    <a href="#physics-fair">Physics-Fair</a>
+                    <a href="#chemistry">Chemistry</a>
+                    <a href="#biology">Biology</a>
+                    <a href="#maths">Maths</a>
+                    <a href="#cs">Computer Science</a>
+                    <a href="#urdu">Urdu</a>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <button class="daily-upload-btn" id="dailyUploadBtn" aria-label="Daily uploads">
+    <i class="fas fa-info"></i>
+</button>
 
-<section class="hero" role="banner">
-  <div class="container">
-    <div class="hero-content" data-aos="fade-right">
-      <h1 class="hero-title">Welcome to Class 10 Fair Books</h1>
-      <p class="hero-desc">Your modern digital Fair books for all Class 10 subjects. Explore fair book images, notes, and resources with a beautiful, interactive experience.</p>
-      <a href="#subjects" class="cta-btn">Start Exploring</a>
-    </div>
-    <div class="hero-visual" aria-hidden="true" data-aos="fade-left">
-      <img src="Untitled_Project__1_-removebg-preview (1).png" alt="Class 10 Fair Books logo">
-    </div>
-  </div>
-</section>
+    </header>
 
-<main>
-  <section id="subjects" class="subjects-section container" aria-label="Subjects">
-    <a href="english-exercise.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#43c6ac,#f8ffae);">📘</span><div class="subject-title">English-Exercise</div><div class="subject-desc">View fair book images for English-Exercise.</div><span class="view-btn">View</span></a>
-    <a href="pak-study.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#fcb69f,#ffecd2);">🇵🇰</span><div class="subject-title">Pak Study</div><div class="subject-desc">View fair book images for Pak Study.</div><span class="view-btn">View</span></a>
-    <a href="physics-rough.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#f9d423,#ff4e50);">⚡</span><div class="subject-title">Physics-Rough</div><div class="subject-desc">View fair book images for Physics-Rough.</div><span class="view-btn">View</span></a>
-    <a href="physics-fair.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb);">🔭</span><div class="subject-title">Physics-Fair</div><div class="subject-desc">View fair book images for Physics-Fair.</div><span class="view-btn">View</span></a>
-    <a href="chemistry.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee);">🧪</span><div class="subject-title">Chemistry</div><div class="subject-desc">View fair book images for Chemistry.</div><span class="view-btn">View</span></a>
-    <a href="biology.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#d4fc79,#96e6a1);">🔬</span><div class="subject-title">Biology</div><div class="subject-desc">View fair book images for Biology.</div><span class="view-btn">View</span></a>
-    <a href="maths.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#fdcbf1,#e6dee9);">📐</span><div class="subject-title">Maths</div><div class="subject-desc">View fair book images for Maths.</div><span class="view-btn">View</span></a>
-    <a href="computer-science.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#84fab0,#8fd3f4);">💻</span><div class="subject-title">Computer Science</div><div class="subject-desc">View fair book images for Computer Science.</div><span class="view-btn">View</span></a>
-    <a href="urdu.html" class="subject-card" data-aos="zoom-in"><span class="subject-icon" style="background:linear-gradient(135deg,#f3e7e9,#e3eeff);">📗</span><div class="subject-title">Urdu</div><div class="subject-desc">View fair book images for Urdu.</div><span class="view-btn">View</span></a>
-  </section>
-</main>
+    <section class="hero" role="banner">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="hero-title">Welcome to Class 10 Fair Books</h1>
+                <p class="hero-desc">Your modern digital Fair books for all Class 10 subjects. Explore fair book images, notes, and resources with a beautiful, interactive experience.</p>
+                <a href="#subjects" class="cta-btn">Start Exploring</a>
+            </div>
+            <div class="hero-visual" aria-hidden="true" data-aos="fade-left">
+                <img src="Untitled_Project__1_-removebg-preview (1).png" alt="Class 10 Fair Books logo" onerror="this.onerror=null;this.src='https://placehold.co/200x200/cccccc/ffffff?text=Image+Error';">
+            </div>
+        </div>
+    </section>
 
-<footer>
-  &copy; 2025 Class 10 Fair Books. By Ameer Ali
-  <div class="socials">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-  </div>
-</footer>
+    <main>
+        <section id="subjects" class="subjects-section container" aria-label="Subjects">
+            <!-- Subject cards are generated by JavaScript now -->
+        </section>
+    </main>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-// Initialize AOS animations
-AOS.init({ duration: 800, once: true });
+    <footer>
+        &copy; 2025 Class 10 Fair Books. By Ameer Ali
+        <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
 
-// Accessible mobile menu
-(() => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.getElementById('main-nav');
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-  function setMenu(open) {
-    const isOpen = typeof open === 'boolean' ? open : !navLinks.classList.contains('active');
-    navLinks.classList.toggle('active', isOpen);
-    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  }
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // --- Data for Subjects ---
+        const subjects = [
+            { id: 'english', title: 'English-Exercise', emoji: '📘', gradient: 'linear-gradient(135deg,#43c6ac,#f8ffae)' },
+            { id: 'pak-study', title: 'Pak Study', emoji: '🇵🇰', gradient: 'linear-gradient(135deg,#fcb69f,#ffecd2)' },
+            { id: 'physics', title: 'Physics-Rough', emoji: '⚡', gradient: 'linear-gradient(135deg,#f9d423,#ff4e50)' },
+            { id: 'physics-fair', title: 'Physics-Fair', emoji: '🔭', gradient: 'linear-gradient(135deg,#a1c4fd,#c2e9fb)' },
+            { id: 'chemistry', title: 'Chemistry', emoji: '🧪', gradient: 'linear-gradient(135deg,#fbc2eb,#a6c1ee)' },
+            { id: 'biology', title: 'Biology', emoji: '🔬', gradient: 'linear-gradient(135deg,#d4fc79,#96e6a1)' },
+            { id: 'maths', title: 'Maths', emoji: '📐', gradient: 'linear-gradient(135deg,#fdcbf1,#e6dee9)' },
+            { id: 'cs', title: 'Computer Science', emoji: '💻', gradient: 'linear-gradient(135deg,#84fab0,#8fd3f4)' },
+            { id: 'urdu', title: 'Urdu', emoji: '📗', gradient: 'linear-gradient(135deg,#f3e7e9,#e3eeff)' }
+        ];
 
-  menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setMenu();
-  });
+        // --- Dynamic Subject Card Generation ---
+        function createSubjectCards() {
+            const container = document.getElementById('subjects');
+            if (!container) return;
+            
+            let cardHTML = '';
+            subjects.forEach(subject => {
+                cardHTML += `
+                    <a href="${subject.id}.html" class="subject-card" data-aos="zoom-in">
+                        <span class="subject-icon" style="background: ${subject.gradient};">${subject.emoji}</span>
+                        <div class="subject-title">${subject.title}</div>
+                        <div class="subject-desc">View fair book images for ${subject.title}.</div>
+                        <span class="view-btn">View</span>
+                    </a>
+                `;
+            });
+            container.innerHTML = cardHTML;
+        }
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && e.target !== menuToggle) setMenu(false);
-  });
+        // --- Initialize AOS (Animate on Scroll) ---
+        function initAOS() {
+            AOS.init({ duration: 800, once: true });
+        }
 
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') setMenu(false);
-  });
-})();
-</script>
+        // --- Accessible Mobile Menu ---
+        function setupMobileMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.getElementById('main-nav');
+
+            if (!menuToggle || !navLinks) return;
+
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = navLinks.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', isOpen);
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && e.target !== menuToggle && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+        
+        // --- Theme Toggler (Dark/Light Mode) ---
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            if (!themeToggle) return;
+
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            themeToggle.addEventListener('click', () => {
+                let theme = document.documentElement.getAttribute('data-theme');
+                if (theme === 'light') {
+                    theme = 'dark';
+                } else {
+                    theme = 'light';
+                }
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            });
+        }
+
+        // --- Back to Top Button ---
+        function setupBackToTopButton() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (!backToTopButton) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+        }
+
+
+        // --- Run all setup functions on DOMContentLoaded ---
+        document.addEventListener('DOMContentLoaded', () => {
+            createSubjectCards();
+            initAOS();
+            setupMobileMenu();
+            setupThemeToggle();
+            setupBackToTopButton();
+        });
+        // Daily Upload Message
+document.getElementById('dailyUploadBtn').addEventListener('click', () => {
+    alert("Today (15-Aug-2025) I have uploaded: Maths and Urdu. GO and Check!");
+});
+
+    </script>
 </body>
 </html>
